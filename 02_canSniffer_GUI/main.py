@@ -278,7 +278,21 @@ class canSnifferGUI(QMainWindow, canSniffer_ui.Ui_MainWindow):
                     for column in range(table.columnCount()):
                         item = table.item(row, column)
                         if item is not None:
-                            rowData.append(str(item.text()))
+                            if column == 0:
+                                tempItem = ''
+                                for mynext in range(0,len(item.text())):
+                                    if item.text()[mynext] !='.':
+                                        tempItem += item.text()[mynext:mynext+1]
+                            elif column == 1:
+                                tempItem = ''
+                                for mynext in range(0,len(item.text())):
+                                    if item.text()[mynext] !=' ':
+                                        tempItem += item.text()[mynext:mynext+1]
+                                    else:
+                                        break
+                            else:
+                                tempItem = item.text()
+                            rowData.append(str(tempItem))
                         else:
                             rowData.append('')
                     writer.writerow(rowData)
