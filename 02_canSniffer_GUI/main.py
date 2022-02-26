@@ -462,7 +462,7 @@ class canSnifferGUI(QMainWindow, canSniffer_ui.Ui_MainWindow):
     def serialPortConnect(self):
         try:
             self.serialController.port = self.portSelectorComboBox.currentText()
-            self.serialController.baudrate = 1000000
+            self.serialController.baudrate = 2000000
             self.serialController.open()
             self.serialReaderThread.start()
             self.serialWriterThread.start()
