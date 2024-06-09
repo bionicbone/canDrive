@@ -3,10 +3,10 @@
 #----------------------------------------------------------------
 import serial
 import canSniffer_ui
-from PyQt5.QtWidgets import QMainWindow, QApplication, QTableWidgetItem, QHeaderView, QFileDialog, QRadioButton
-from PyQt5.QtWidgets import QVBoxLayout, QSizeGrip
-from PyQt5.QtCore import Qt
-from PyQt5.QtGui import QColor
+from PyQt6.QtWidgets import QMainWindow, QApplication, QTableWidgetItem, QHeaderView, QFileDialog, QRadioButton
+from PyQt6.QtWidgets import QVBoxLayout, QSizeGrip
+from PyQt6.QtCore import Qt
+from PyQt6.QtGui import QColor
 import serial.tools.list_ports
 
 import sys
